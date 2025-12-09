@@ -1,0 +1,11 @@
+[tool.robocop.lint]
+# Enable all rules (all categories, all severity levels: I, W, E)
+select = [
+    "*"
+]
+
+ignore = [
+    "NAME02", # Disable rule: wrong-case-in-keyword-name
+    "DEPR05", # Disable rule: use-replace-set-variable-with-var
+    "NAME08"  # Disable rule: section-variable-not-uppercase
+]
