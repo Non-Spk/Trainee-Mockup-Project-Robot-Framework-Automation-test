@@ -1,6 +1,3 @@
-*** Settings ***
-Documentation    Checkout: overview page locators for Sauce Demo application.
-
 *** Variables ***
 &{checkout_overview_page_locator}
 ...    page_title=data-test=title
