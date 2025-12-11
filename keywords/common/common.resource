@@ -1,19 +1,12 @@
 *** Settings ***
 Documentation    Common reuseble keywords
 
-
 *** Keywords ***
-Log to console
-    [Documentation]
-    ...    Logs a message to the console or log.html with a specified level.
-    ...    Available levels:
-    ...    - TRACE: not shown in terminal, shown in debug console and log.html
-    ...    - DEBUG: not shown in terminal, shown in debug console and log.html
-    ...    - INFO: shown in terminal, debug console, log.html, and report.html
-    ...    - WARN: shown in terminal, debug console, log.html, and report.html
-    ...    - ERROR: shown in terminal, debug console, log.html, and report.html
+Write Log Message
+    [Documentation]    Logs a message with specific level.
+    ...    Levels: TRACE, DEBUG, INFO, WARN, ERROR
     [Arguments]    ${message}    ${level}=INFO
-    BuiltIn.Log    ${message}    ${level}
+    BuiltIn.Log    ${message}    level=${level}
 
 Should contain text
     [Documentation]    Verifies that the given text contains the expected substring.
