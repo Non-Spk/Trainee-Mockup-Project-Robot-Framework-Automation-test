@@ -6,7 +6,7 @@ Check page title
     [Documentation]    Check if page title display the correct text or not
     [Arguments]    ${timeout}
     common_web.Wait for element is ready    ${checkout_overview_page_locator.page_title}    ${timeout}
-    common_web.Element should contain text    ${checkout_overview_page_locator.page_title}    Checkout: Your Information
+    common_web.Element should contain text    ${checkout_overview_page_locator.page_title}    Checkout: Overview
 
 Check product item title
     [Documentation]    Check product title in page
