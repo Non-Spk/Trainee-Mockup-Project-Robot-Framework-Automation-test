@@ -23,8 +23,7 @@ Close every browser
 Element should contain text
     [Documentation]    Verify element contains specific text base on SeleniumLibrary
     [Arguments]    ${locator}    ${expected_text}
-    ${actual_text}=    SeleniumLibrary.Get Text    ${locator}
-    SeleniumLibrary.Element Text Should Be    ${actual_text}    ${expected_text}    msg=Element text mismatch
+    SeleniumLibrary.Element Text Should Be    ${locator}    ${expected_text}    msg=Element text mismatch
 
 Get element text
     [Documentation]    Get text from element base on SeleniumLibrary
@@ -78,7 +77,7 @@ Wait for element is ready
     [Documentation]
     ...    Check element is append in DOM and scroll into view and next to check Visible -> Enable
     [Arguments]    ${locator}    ${timeout}=10s
-    SeleniumLibrary.Wait Until Page Contains Element    ${locator}
+    SeleniumLibrary.Wait Until Page Contains Element    ${locator}    ${timeout}
     SeleniumLibrary.Scroll Element Into View    ${locator}
-    SeleniumLibrary.Wait Until Element Is Visible    ${locator}    timeout=${timeout}
-    SeleniumLibrary.Wait Until Element Is Enabled    ${locator}    timeout=${timeout}
+    SeleniumLibrary.Wait Until Element Is Visible    ${locator}    ${timeout}
+    SeleniumLibrary.Wait Until Element Is Enabled    ${locator}    ${timeout}
