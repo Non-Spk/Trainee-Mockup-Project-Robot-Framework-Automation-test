@@ -4,8 +4,24 @@ Resource    ${CURDIR}/../../../../resources/import.resource
 *** Keywords ***
 Check page title
     [Documentation]    Check if page title display the correct text or not
-    common_web.Wait for element is ready    locator=${customer_information_page_locator['page_title']}
-    common_web.Element should contain text    locator=${customer_information_page_locator['page_title']}    expected_text=${txt_customer_infomation_page['txt_title']}
+    common_web.Wait for element is ready    locator=${customer_information_page_locator['txt_page_title']}    timeout=${wait_timeout['normally['short_timeout']']}
+    common_web.Element should contain text    locator=${customer_information_page_locator['txt_page_title']}    expected_text=${txt_customer_infomation_page['txt_title']}
+
+CLick continue btn and check page
+    [Documentation]    Click Continue button and next page should contain locator
+    [Arguments]    ${wait_element_locator}
+    common_web.Click element and wait    locator=${customer_information_page_locator['btn_continue']}    wait_element_locator=${wait_element_locator}    timeout=${wait_timeout['normally['short_timeout']']}
+
+CLick cancel btn and check page
+    [Documentation]    Click Cancel button and next page should contain locator
+    [Arguments]    ${wait_element_locator}
+    common_web.Click element and wait    locator=${customer_information_page_locator['btn_cancel']}    wait_element_locator=${wait_element_locator}    timeout=${wait_timeout['normally['short_timeout']']}
+
+Error popup
+    [Documentation]    Check if popup with error message appear correctly or not
+    [Arguments]    ${message}
+    common_web.Wait for element is ready    locator=${customer_information_page_locator['txt_error_msg']}    timeout=${wait_timeout['normally['short_timeout']']}
+    common_web.Element should contain text    locator=${customer_information_page_locator['txt_error_msg']}    expected_text=${message}
 
 CLick continue btn and check page
     [Documentation]    Click Continue button and next page should contain locator
