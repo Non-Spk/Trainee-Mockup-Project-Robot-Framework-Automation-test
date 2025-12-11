@@ -3,8 +3,8 @@ Documentation       Cart page locators for Sauce Demo application.
 
 *** Variables ***
 &{cart_page_locator}
-...    txt_title=data-test=title
-...    back_to_shopping_btn=id=continue-shopping
-...    checkout_btn=checkout
-...    hamburger_menu_btn=id=react-burger-menu-btn
-...    reset_cart_btn=id=reset_sidebar_link
+...    txt_title=xpath=//span[@data-test='title']
+...    btn_back_to_shopping=id=continue-shopping
+...    btn_checkout=id=checkout
+...    btn_hamburger_menu=id=react-burger-menu-btn
+...    btn_reset_cart=id=reset_sidebar_link
