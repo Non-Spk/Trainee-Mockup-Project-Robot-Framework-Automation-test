@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ${CURDIR}/../../../../resources/import.resource
 
-
 *** Keywords ***
 Check product list page title
     [Documentation]    Check product list page title

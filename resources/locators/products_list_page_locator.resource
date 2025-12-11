@@ -1,6 +1,3 @@
-*** Settings ***
-Documentation       product list page locators for Sauce Demo application.
-
 *** Variables ***
 &{product_list_page_locator}
 ...    txt_title=data-test=title
