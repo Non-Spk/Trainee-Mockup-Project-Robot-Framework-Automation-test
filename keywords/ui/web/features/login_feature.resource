@@ -2,7 +2,7 @@
 Resource    ${CURDIR}/../../../../resources/import.resource
 
 *** Keywords ***
-Login with credentials
+Open website and login to product list page
     [Documentation]    Login with given username and password
     [Arguments]    ${username}    ${password}
     login_page.Open login page
@@ -10,4 +10,6 @@ Login with credentials
     login_page.Input username    username=${username}
     login_page.Input password    password=${password}
     login_page.Click login button
+    product_list_page.Check product list page title 
+    
 
