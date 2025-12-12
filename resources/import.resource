@@ -2,6 +2,7 @@
 #Library
 Library    SeleniumLibrary
 Library    DateTime
+Library    String
 
 #Transalation
 Variables    ${CURDIR}/../resources/transalation/eng.yaml
