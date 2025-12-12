@@ -11,11 +11,12 @@ Variables    ${CURDIR}/../resources/transalation/eng.yaml
 Variables    ${CURDIR}/../resources/setting/config.yaml
 
 #Locators
-Resource    ${CURDIR}/../resources/locators/login_page_locator.resource
-Resource    ${CURDIR}/../resources/locators/products_list_page_locator.resource
 Resource    ${CURDIR}/../resources/locators/checkout_complete_page_locator.resource
 Resource    ${CURDIR}/../resources/locators/checkout_overview_page_locator.resource
 Resource    ${CURDIR}/../resources/locators/customer_information_page_locator.resource
+Resource    ${CURDIR}/../resources/locators/login_page_locator.resource
+Resource    ${CURDIR}/../resources/locators/products_list_page_locator.resource
+
 
 #Keywords
 Resource    ${CURDIR}/../keywords/common/common_web.resource
