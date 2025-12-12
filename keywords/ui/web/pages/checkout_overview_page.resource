@@ -13,15 +13,17 @@ Check product item title
     common_web.Wait for element is ready    locator=${checkout_overview_page_locator['txt_item_name']}    timeout=${wait_timeout['normally['short_timeout']']}
     common_web.Element should contain text    locator=${checkout_overview_page_locator['txt_item_name']}    expected_text=${item_name}
 
-CLick finish btn and check page
-    [Documentation]    Click finish button and next page should contain locator
-    [Arguments]    ${wait_element_locator}
-    common_web.Click element and wait    locator=${checkout_overview_page_locator['btn_finish']}    wait_element_locator=${wait_element_locator}    timeout=${wait_timeout['normally['short_timeout']']}
+Click finish button and wait next page
+    [Documentation]    Click finish button and next page should be checkout complete page
+    common_web.Click element and wait    locator=${checkout_overview_page_locator['btn_finish']}    
+    ...    wait_element_locator=
+    ...    timeout=${wait_timeout['normally['short_timeout']']}
 
-CLick cancel btn and check page
-    [Documentation]    Click Cancel button and next page should contain locator
-    [Arguments]    ${wait_element_locator}
-    common_web.Click element and wait    locator=${checkout_overview_page_locator['btn_cancel']}    wait_element_locator=${wait_element_locator}    timeout=${wait_timeout['normally['short_timeout']']}
+Click cancel button and wait main page
+    [Documentation]    Click Cancel button and next page should be main page
+    common_web.Click element and wait    locator=${checkout_overview_page_locator['btn_cancel']}    
+    ...    wait_element_locator=    
+    ...    timeout=${wait_timeout['normally['short_timeout']']}
 
 Compare total price
     [Documentation]    Compare page total price and actual total price
