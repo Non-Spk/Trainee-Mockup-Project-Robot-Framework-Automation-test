@@ -6,3 +6,6 @@ txt_product_list_page:
 
 txt_customer_infomation_page:
   txt_title: "Checkout: Your Information"
+
+txt_checkout_overview_page:
+  txt_title: "Checkout: Overview"
