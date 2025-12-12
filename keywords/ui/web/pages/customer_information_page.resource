@@ -23,7 +23,7 @@ Error popup
     common_web.Wait for element is ready    locator=${customer_information_page_locator['txt_error_msg']}    timeout=${wait_timeout['normally['short_timeout']']}
     common_web.Element should contain text    locator=${customer_information_page_locator['txt_error_msg']}    expected_text=${message}
 
-Input fist name
+Input first name
     [Documentation]    Input first name value in first name input field
     [Arguments]    ${first_name}
     common_web.Input text and verify    locator=${customer_information_page_locator['txt_first_name']}    text=${first_name}
@@ -37,3 +37,9 @@ Input zip/postal code
     [Documentation]    Input first name value in zip/postal code input field
     [Arguments]    ${zip_code}
     common_web.Input text and verify    locator=${customer_information_page_locator['txt_zip_code']}    text=${zip_code}
+
+load input fields
+    [Documentation]    Verify every input fields in customer information page
+    common_web.Wait for element is ready    locator=${customer_information_page_locator['txt_first_name']}    timeout=${wait_timeout['normally['short_timeout']']}
+    common_web.Wait for element is ready    locator=${customer_information_page_locator['txt_last_name']}    timeout=${wait_timeout['normally['short_timeout']']}
+    common_web.Wait for element is ready    locator=${customer_information_page_locator['txt_zip_code']}    timeout=${wait_timeout['normally['short_timeout']']}

@@ -19,3 +19,7 @@ account:
   visual_user:
     username: visual_user
     password: secret_sauce
+credentials:
+  firstname: Arai
+  lastname: Dee
+  zipcode: 55555

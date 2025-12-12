@@ -29,4 +29,5 @@ Missing zip/postal code input
     customer_information_page.load input fields
     customer_information_page.Input first name    first_name=${credentials['firstname']}
     customer_information_page.Input last name    last_name=${credentials['lastname']}
+    customer_information_page.Error popup    message=${txt_customer_infomation_page['txt_missing_zip/postal_code']}
     
