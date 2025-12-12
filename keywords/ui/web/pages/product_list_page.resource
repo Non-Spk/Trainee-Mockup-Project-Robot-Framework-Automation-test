@@ -33,3 +33,14 @@ Check product detail have added to cart
     common_web.Element should contain text
     ...    locator=${product_list_page_locator['lbl_cart_item']}
     ...    expected_text=${product_detail}
+
+Create product item list
+    [Documentation]    Creates and returns a list containing the names of all products
+    ${product_list}=    BuiltIn.Create List
+    ...    ${product['backpack']['product_name']}
+    ...    ${product['jacket']['product_name']}
+    ...    ${product['t_shirt']['product_name']}
+    ...    ${product['bike_light']['product_name']}
+    ...    ${product['Onesie']['product_name']}
+    ...    ${product['red_t-shirt']['product_name']}
+    RETURN    ${product_list}
