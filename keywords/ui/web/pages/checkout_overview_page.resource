@@ -13,6 +13,12 @@ Check product item title
     common_web.Wait for element is ready    locator=${checkout_overview_page_locator['txt_item_name']}    timeout=${wait_timeout['normally['short_timeout']']}
     common_web.Element should contain text    locator=${checkout_overview_page_locator['txt_item_name']}    expected_text=${item_name}
 
+Click finish button and nothing happen
+    [Documentation]    Click finish button and still stay on the same page
+    common_web.Click element and wait    locator=${checkout_overview_page_locator['btn_finish']}    
+    ...    wait_element_locator=${checkout_overview_page_locator['txt_page_title']}    
+    ...    timeout=${wait_timeout['normally['short_timeout']']}
+
 Click finish button and wait next page
     [Documentation]    Click finish button and next page should be checkout complete page
     common_web.Click element and wait    locator=${checkout_overview_page_locator['btn_finish']}    
