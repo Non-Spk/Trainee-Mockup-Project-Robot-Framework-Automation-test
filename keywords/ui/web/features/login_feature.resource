@@ -1,18 +1,24 @@
 *** Settings ***
 Resource    ${CURDIR}/../../../../resources/import.resource
 
-*** Keywords ***
+*** Keywords **
 Open website and login to product list page
-    [Documentation]    Login with given username and password
+    [Documentation]    Login with given username and password.
     [Arguments]    ${username}    ${password}
     login_page.Open login page
     login_page.Check login page title
     login_page.Input username    username=${username}
     login_page.Input password    password=${password}
-    login_page.Click login button
-    IF    '${username}'== 'locked_out_user'
-        Check login page error
-        ELSE
-        product_list_page.Check product list page title
-    END
+    login_page.Click login button when ready
+    product_list_page.Check product list page title
+
+Open website and login with invaild username
+    [Documentation]    Open website and login with invalid credentials, verifying that an error message is displayed.
+    [Arguments]    ${username}    ${password}
+    login_page.Open login page
+    login_page.Check login page title
+    login_page.Input username    username=${username}
+    login_page.Input password    password=${password}
+    login_page.Click login button when ready
+    login_page.Wait until login error message appears
     
