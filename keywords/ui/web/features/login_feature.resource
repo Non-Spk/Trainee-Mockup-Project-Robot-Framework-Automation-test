@@ -12,7 +12,6 @@ Open website and login to product list page
     login_page.Click login button when ready
     product_list_page.Check product list page title
     
-
 Open website and login with invaild username
     [Documentation]    Opens website and login with invalid credentials, verifying that an error message is displayed.
     [Arguments]    ${username}    ${password}
