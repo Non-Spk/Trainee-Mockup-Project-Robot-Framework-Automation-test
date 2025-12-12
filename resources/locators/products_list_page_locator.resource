@@ -4,7 +4,5 @@
 ...    btn_add_all_product_to_cart=xpath=//button[contains(@id,'add-to-cart')]
 ...    btn_dropdown=data-test=product-sort-container
 ...    btn_go_to_cart=data-test=shopping-cart-link
-...    btn_add_item=xpath=//div[@class='inventory_item_name' and text()='***replace***']
+...    btn_add_item=xpath=//div[@class='inventory_item_name' and text()='***replace***']/ancestor::div[@class='inventory_item']//button
 ...    lbl_cart_item=xpath=//div[@class,'cart_item_label']
-
-@{List_item}    Create List    Sauce Labs Backpack    Sauce Labs Fleece Jacket
