@@ -3,7 +3,7 @@ Resource    ${CURDIR}/../../resources/import.resource
 Test Teardown    common_web.Close this browser
 
 *** Test Cases ***
-Login successfully with error user
+TS_01001_005
     [Documentation]    Verifies that the error_user can login and access the Product List page. 
     [Tags]    F_0001    TS_01001    login    error_user
     login_feature.Open website and login to product list page
