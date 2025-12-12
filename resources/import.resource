@@ -20,9 +20,9 @@ Resource    ${CURDIR}/../resources/locators/customer_information_page_locator.re
 #Keywords
 Resource    ${CURDIR}/../keywords/common/common_web.resource
 Resource    ${CURDIR}/../keywords/common/common.resource
+Resource    ${CURDIR}/../keywords/ui/web/pages/customer_information_page.resource
 Resource    ${CURDIR}/../keywords/ui/web/pages/login_page.resource
 Resource    ${CURDIR}/../keywords/ui/web/pages/product_list_page.resource
-Resource    ${CURDIR}/../keywords/ui/web/pages/customer_information_page.resource
 
 #Datatest
 Variables    ${CURDIR}/../resources/datatest/datatest.yaml
