@@ -10,6 +10,7 @@ Check login page title
 
 Click login button
     [Documentation]    Click login button on login page
+    common_web.Wait for element is ready    locator=${login_page_locator['btn_login']}
     common_web.Click element and wait    locator=${login_page_locator['btn_login']}
 
 Input username
