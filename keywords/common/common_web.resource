@@ -81,3 +81,9 @@ Wait for element is ready
     SeleniumLibrary.Scroll Element Into View    ${locator}
     SeleniumLibrary.Wait Until Element Is Visible    ${locator}    ${timeout}
     SeleniumLibrary.Wait Until Element Is Enabled    ${locator}    ${timeout}
+
+Replace string
+    [Documentation]
+    [Arguments]    ${locator}    ${new_string}
+    ${new_locator}=    String.Replace String    string=${locator}    search_for=***replace***    replace_with=${new_string}
+    RETURN    ${new_locator}    

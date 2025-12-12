@@ -8,14 +8,22 @@ Check page title
     common_web.Element should contain text    locator=${customer_information_page_locator['txt_page_title']}    expected_text=${txt_customer_infomation_page['txt_title']}
 
 Click continue button and check page
-    [Documentation]    Click Continue button and next page should contain locator
-    [Arguments]    ${wait_element_locator}
-    common_web.Click element and wait    locator=${customer_information_page_locator['btn_continue']}    wait_element_locator=${wait_element_locator}    timeout=${wait_timeout['normally['short_timeout']']}
+    [Documentation]    Click Continue button and next page should be checkout overview
+    common_web.Click element and wait    locator=${customer_information_page_locator['btn_continue']}    
+    ...    wait_element_locator=${checkout_overview_page_locator['txt_page_title']}    
+    ...    timeout=${wait_timeout['normally['short_timeout']']}
+
+Click continue button and error
+    [Documentation]    Click Continue button and next page should contain error popup
+    common_web.Click element and wait    locator=${customer_information_page_locator['btn_continue']}    
+    ...    wait_element_locator=${customer_information_page_locator['txt_error_msg']}    
+    ...    timeout=${wait_timeout['normally['short_timeout']']}
 
 Click cancel button and check page
-    [Documentation]    Click Cancel button and next page should contain locator
-    [Arguments]    ${wait_element_locator}
-    common_web.Click element and wait    locator=${customer_information_page_locator['btn_cancel']}    wait_element_locator=${wait_element_locator}    timeout=${wait_timeout['normally['short_timeout']']}
+    [Documentation]    Click Cancel button and next page should be main 
+    common_web.Click element and wait    locator=${customer_information_page_locator['btn_cancel']}    
+    ...    wait_element_locator=${cart_page_locator['txt_title']}    
+    ...    timeout=${wait_timeout['normally['short_timeout']']}
 
 Input fist name
     [Documentation]    Input first name value in first name input field
