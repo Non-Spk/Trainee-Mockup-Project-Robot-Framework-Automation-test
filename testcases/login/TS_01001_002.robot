@@ -17,4 +17,4 @@ TS_01001_002
     login_feature.Input password and verify value in password box
     ...    password=${account['locked_out_user']['password']}
     # กดปุ่ม login และจะแสดงข้อความ error
-    login_feature.Click login button and wait for error message container
+    login_feature.Click login button and wait for login error message
