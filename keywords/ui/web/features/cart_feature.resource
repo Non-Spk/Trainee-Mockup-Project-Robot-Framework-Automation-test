@@ -16,6 +16,7 @@ Verify one item detail at cart page
     ...    name=${product['${product}']['product_name']}
     ...    price=${product['${product}']['product_price']}
     ...    description=${product['${product}']['product_description']}
+    cart_page.Click go to checkout button
 
 Verify Multiple Items In Cart
     [Documentation]    Iterates through a list of product data dictionaries and verifies that each item exists in the cart with correct details.
@@ -26,3 +27,4 @@ Verify Multiple Items In Cart
         ...    price=${item.product_price}
         ...    description=${item.product_description}
     END
+    cart_page.Click go to checkout button

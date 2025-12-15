@@ -12,8 +12,11 @@ Resource    ${CURDIR}/../keywords/common/common.resource
 Resource    ${CURDIR}/../keywords/common/common_web.resource
 
 # FEATURE
+Resource    ${CURDIR}/../keywords/ui/web/features/cart_feature.resource
 Resource    ${CURDIR}/../keywords/ui/web/features/checkout_feature.resource
+Resource    ${CURDIR}/../keywords/ui/web/features/customer_information_feature.resource
 Resource    ${CURDIR}/../keywords/ui/web/features/login_feature.resource
+Resource    ${CURDIR}/../keywords/ui/web/features/product_list_feature.resource
 
 # PAGE
 Resource    ${CURDIR}/../keywords/ui/web/pages/checkout_overview_page.resource

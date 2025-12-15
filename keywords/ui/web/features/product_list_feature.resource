@@ -4,7 +4,7 @@ Resource    ${CURDIR}/../../../../resources/import.resource
 *** Keywords ***
 Add one item to cart
     [Documentation]    เพิ่มสินค้า 1 รายการ (เช่น Sauce Labs Backpack) ลงในตะกร้า
-    [Arguments]    ${product_name}    ${product_price}    ${product_description}
+    [Arguments]    ${product_name}
     product_list_page.Click add one item to cart    product_name=${product_name}
     product_list_page.Click go to cart page
 
