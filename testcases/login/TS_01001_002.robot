@@ -16,5 +16,5 @@ TS_01001_002
     # กรอก password และตรวจสอบ value หลังกรอก
     login_feature.Input password and verify value in password box
     ...    password=${account['locked_out_user']['password']}
-    # กดปุ่ม login และเปิดหน้า product list สำเร็จ
+    # กดปุ่ม login และจะแสดงข้อความ error
     login_feature.Click login button and wait for error message container
