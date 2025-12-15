@@ -1,11 +1,13 @@
 *** Settings ***
 Resource    ${CURDIR}/../../resources/import.resource
+Test Teardown    common_web.Close all browser
 
 *** Keywords ***
 TS_03001_001
     [Documentation]    Add single item to the cart using standard user accout
     [Tags]    F_0003    TS_013001    TS_03001_001    Add_single_item     standard_user  
-    login_feature.Open website and login to product list page
+    #เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
+    login_feature.Open login page and login to product list page    
     ...    username=${account['standard_user']['username']}
     ...    password=${account['standard_user']['password']}
     product_list_page.Check product list page title
