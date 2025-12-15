@@ -4,7 +4,7 @@ Resource    ${CURDIR}/../../../../resources/import.resource
 *** Keywords ***
 Check page title
     [Documentation]    ตรวจสอบว่าชื่อหน้าถูกต้องตามที่คาดหวังหรือไม่
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${customer_information_page_locator['txt_page_title']}
     ...    text=${txt_customer_infomation_page['txt_title']}
 

@@ -4,14 +4,14 @@ Resource    ${CURDIR}/../../../../resources/import.resource
 *** Keywords ***
 Check page title
     [Documentation]    ตรวจสอบว่าชื่อหน้าถูกต้องตามที่คาดหวังหรือไม่
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${checkout_overview_page_locator['txt_page_title']}
     ...    text=${txt_checkout_overview_page['txt_title']}
 
 Check product item title
     [Documentation]    ตรวจสอบชื่อสินค้าที่ปรากฏบนหน้า
     [Arguments]    ${item_name}
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${checkout_overview_page_locator['txt_item_name']}
     ...    text=${item_name}
 
@@ -25,12 +25,12 @@ Click cancel button
 
 Get tax
     [Documentation]    ดึงค่าภาษีจากหน้าจอ Checkout Overview Page และส่งกลับเป็นตัวแปร
-    ${tax}=    common_web.Get element text when vissible    locator=${checkout_overview_page_locator['txt_tax']}
+    ${tax}=    common_web.Get element text when visible    locator=${checkout_overview_page_locator['txt_tax']}
     RETURN    ${tax}
 
 Get item total price
     [Documentation]    ดึงค่ารวมราคาสินค้าจากหน้าจอ Checkout Overview Page และส่งกลับเป็นตัวแปร
-    ${total_price}=    common_web.Get element text when vissible
+    ${total_price}=    common_web.Get element text when visible
     ...    locator=${checkout_overview_page_locator['txt_item_total_price']}
     RETURN    ${total_price}
 

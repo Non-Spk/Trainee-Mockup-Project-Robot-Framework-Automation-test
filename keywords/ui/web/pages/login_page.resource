@@ -4,7 +4,7 @@ Resource    ${CURDIR}/../../../../resources/import.resource
 *** Keywords ***
 Check login page title
     [Documentation]    ตรวจสอบว่าชื่อหน้าล็อกอินถูกต้องตามที่คาดหวัง
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${login_page_locator['txt_title']}
     ...    text=${txt_login_page['txt_title']}
 

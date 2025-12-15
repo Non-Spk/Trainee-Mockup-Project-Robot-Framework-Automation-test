@@ -19,7 +19,7 @@ Input every fields and last name error
     customer_information_page.Input zip postal code    zip_code=${credentials['zipcode']}
     customer_information_page.Click continue button
     customer_information_page.Wait until error message appeared
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${customer_information_page_locator['txt_error_msg']}
     ...    text=${txt_customer_infomation_page['txt_missing_last_name']}
 
@@ -31,7 +31,7 @@ Missing firstname input
     customer_information_page.Input zip postal code    zip_code=${credentials['zipcode']}
     customer_information_page.Click continue button
     customer_information_page.Wait until error message appeared
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${customer_information_page_locator['txt_error_msg']}
     ...    text=${txt_customer_infomation_page['txt_missing_first_name']}
 
@@ -42,7 +42,7 @@ Missing zip/postal code input
     customer_information_page.Input last name    last_name=${credentials['lastname']}
     customer_information_page.Click continue button
     customer_information_page.Wait until error message appeared
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${customer_information_page_locator['txt_error_msg']}
     ...    text=${txt_customer_infomation_page['txt_missing_zip/postal_code']}
 

@@ -2,7 +2,7 @@
 Resource    ${CURDIR}/../../resources/import.resource
 
 *** Keywords ***
-Check element text when vissible
+Check element text when visible
     [Documentation]    ตรวจสอบว่า element ปรากฏอยู่บนหน้า และตรวจสอบว่าข้อความภายใน element ตรงกับค่าที่กำหนด
     [Arguments]    ${locator}    ${text}
     Scroll into element and wait until element visible    locator=${locator}
@@ -18,7 +18,7 @@ Close all browser
     [Documentation]    ปิดหน้าต่าง browsers
     SeleniumLibrary.Close All Browsers
 
-Get element text when vissible
+Get element text when visible
     [Documentation]    ดึงข้อความจาก element หลังจากตรวจสอบว่า element มองเห็นได้แล้ว และส่งค่าข้อความกลับไปยังตัวแปร
     [Arguments]    ${locator}
     Scroll into element and wait until element visible    locator=${locator}

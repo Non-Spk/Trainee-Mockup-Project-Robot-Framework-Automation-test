@@ -5,13 +5,13 @@ Resource    ${CURDIR}/../../../../resources/import.resource
 Check product detail have added to cart
     [Documentation]    ตรวจสอบข้อมูลสินค้าที่ถูกเพิ่มลงในตะกร้า โดยตรวจสอบชื่อสินค้า, คำอธิบายสินค้า และราคาสินค้า
     [Arguments]    ${product_detail}
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${product_list_page_locator['lbl_cart_item']}
     ...    text=${product_detail}
 
 Check product list page title
     [Documentation]    ตรวจสอบว่าหน้าปัจจุบันคือหน้า Product List โดยตรวจสอบชื่อหน้าตามที่คาดหวัง
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${product_list_page_locator['txt_title']}
     ...    text=${txt_product_list_page['txt_title']}
 

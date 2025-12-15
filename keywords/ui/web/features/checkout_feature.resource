@@ -18,7 +18,7 @@ Get all product price
     ${list_product_price}=    checkout_overview_page.Get list of product price
     ${total_sum}=    BuiltIn.Set Variable    0.0
     FOR    ${element}    IN    @{list_product_price}
-        ${price_text}=    common_web.Get element text when vissible    locator=${element}
+        ${price_text}=    common_web.Get element text when visible    locator=${element}
         ${clean_price_str}=    common.Sanitize text    ${price_text}
         ${total_sum}=    BuiltIn.Evaluate    ${total_sum} + float('${clean_price_str}')
     END

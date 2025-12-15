@@ -4,13 +4,13 @@ Resource    ${CURDIR}/../../../../resources/import.resource
 *** Keywords ***
 Check page title
     [Documentation]    ตรวจสอบว่าชื่อหน้าถูกต้องตามที่คาดหวังหรือไม่
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${checkout_complete_page_locator['page_title']}
     ...    text=${txt_checkout_complete_page['txt_title']}
 
 Check thank you message
     [Documentation]    ตรวจสอบว่าข้อความ "Thank you" ปรากฏหรือไม่
-    common_web.Check element text when vissible
+    common_web.Check element text when visible
     ...    locator=${checkout_complete_page_locator['txt_thank_you']}
     ...    text=${txt_checkout_complete_page['txt_thankyou']}
 
