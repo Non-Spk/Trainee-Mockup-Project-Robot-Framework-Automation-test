@@ -14,6 +14,7 @@ Add multiple products to cart
     FOR    ${product_name}    IN    @{items_to_add}
         product_list_page.Click add one item to cart    ${product_name}
     END
+    product_list_page.Click go to cart page
 
 Create product item list
     [Documentation]    สร้างและส่งคืนลิสต์ชื่อสินค้าทั้งหมดจาก dictionary ของสินค้า
