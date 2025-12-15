@@ -3,10 +3,10 @@ Resource    ${CURDIR}/../../../../resources/import.resource
 
 *** Keywords ***
 Check cart page title
-    [Documentation]    Verify that already in cart page
-    common_web.Element should contain text
+    [Documentation]    ตรวจสอบว่าอยู่หน้าตะกร้าสินค้าแล้ว
+    common_web.Check element text when visible
     ...    locator=${cart_page_locator['txt_title']}
-    ...    expected_text=${txt_cart_page['txt_title']}
+    ...    text=${txt_cart_page['txt_title']}
 
 Click remove one item from cart
     [Documentation]    Remove a single item from the shopping cart by clicking its 'Remove' button.
