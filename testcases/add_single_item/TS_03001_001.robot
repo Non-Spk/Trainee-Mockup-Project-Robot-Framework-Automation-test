@@ -4,8 +4,8 @@ Test Teardown    common_web.Close all browser
 
 *** Test Cases ***
 TS_03001_001
-    [Documentation]    Add single item to the cart using standard user accout
-    [Tags]    F_0003    TS_013001    TS_03001_001    Add_single_item     standard_user  
+    [Documentation]    เพิ่มสินค้าหนึ่งชิ้นลงตะกร้าโดยใช้ บัญชีผู้ใช้ standard_user
+    [Tags]    F_0003    TS_013001    TS_03001_001    add_single_item     standard_user  
     # เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
     login_feature.Open login page and login to product list page    
     ...    username=${account['standard_user']['username']}
