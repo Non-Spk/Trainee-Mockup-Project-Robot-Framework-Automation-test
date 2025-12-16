@@ -22,20 +22,11 @@ Verify one item detail at cart page
 
 Verify Multiple Items In Cart
     [Documentation]    ตรวจสอบรายละเอียดสินค้าหลายชิ้นตามรายการใน List
-    @{expected_item}=    Create product item detail list
+    @{expected_item}=    Create product item list
     FOR    ${item}    IN    @{expected_item}
         cart_page.Verify Specific Product Detail In Cart
         ...    name=${item['product_name']}
         ...    price=${item['product_price']}
         ...    description=${item['product_description']}
     END
-
-Create product item detail list
-    [Documentation]    สร้างและส่งคืนลิสต์ข้อมูลสินค้าทั้งหมดจาก dictionary ของสินค้า
-    ${product_list}=    Collections.Get Dictionary Keys    ${product}
-    ${product_detail_list}=    BuiltIn.Create List
-    FOR    ${product_item}    IN    @{product_list}
-        Collections.Append To List    ${product_detail_list}    ${product['${product_item}']}
-    END
-    RETURN    ${product_detail_list}
 
