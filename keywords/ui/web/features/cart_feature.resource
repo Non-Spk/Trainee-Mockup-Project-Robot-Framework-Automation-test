@@ -20,10 +20,10 @@ Verify one item detail at cart page
     ...    price=${product['product_price']}
     ...    description=${product['product_description']}
 
-Verify Multiple Items In Cart
+Verify multiple items in cart
     [Documentation]    ตรวจสอบรายละเอียดสินค้าหลายชิ้นตามรายการใน List
-    [Arguments]    ${expected_item}
-    FOR    ${item}    IN    @{expected_item}
+    [Arguments]    ${multiple_item_list}   
+    FOR    ${item}    IN    @{multiple_item_list}  
         cart_page.Verify Specific Product Detail In Cart
         ...    name=${item['product_name']}
         ...    price=${item['product_price']}
