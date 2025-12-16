@@ -22,7 +22,7 @@ Verify one item detail at cart page
 
 Verify Multiple Items In Cart
     [Documentation]    ตรวจสอบรายละเอียดสินค้าหลายชิ้นตามรายการใน List
-    [Arguments]    ${expected_item}
+    @{expected_item}=    product_list_feature.Create product item list
     FOR    ${item}    IN    @{expected_item}
         cart_page.Verify Specific Product Detail In Cart
         ...    name=${item.product_name}
