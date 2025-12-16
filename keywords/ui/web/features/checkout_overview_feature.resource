@@ -34,7 +34,7 @@ Confirm checkout with all item
     ${cart_price}=    checkout_feature.Get all product price
     ${tax}=    checkout_overview_page.Get item tax
     ${cart_price_with_tax}=    BuiltIn.Evaluate    ${cart_price} + ${tax}
-    ${page_total_price}=    checkout_overview_page.Get item total price
+    ${page_total_price}=    checkout_overview_page.Get total price
     BuiltIn.Should Be Equal    ${cart_price_with_tax}    ${page_total_price}
     checkout_overview_page.Click finish button
     checkout_complete_page.Check page title
@@ -47,7 +47,7 @@ Confirm checkout error
     ${cart_price}=    checkout_feature.Get all product price
     ${tax}=    checkout_overview_page.Get item tax
     ${cart_price_with_tax}=    BuiltIn.Evaluate    ${cart_price} + ${tax}
-    ${page_total_price}=    checkout_overview_page.Get item total price
+    ${page_total_price}=    checkout_overview_page.Get total price
     BuiltIn.Should Be Equal    ${cart_price_with_tax}    ${page_total_price}
     checkout_overview_page.Click finish button
     checkout_complete_page.Check page title

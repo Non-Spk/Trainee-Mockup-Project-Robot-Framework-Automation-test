@@ -8,7 +8,7 @@ Compare total price
     ${tax_element_text}=    checkout_overview_page.Get item tax
     ${clean_tax_str}=    common.Sanitize text    ${tax_element_text}
     ${expected_total_float}=    BuiltIn.Evaluate    round(${items_price} + float('${clean_tax_str}'), 2)
-    ${page_total_text}=    checkout_overview_page.Get item total price
+    ${page_total_text}=    checkout_overview_page.Get total price
     ${clean_page_total}=    common.Sanitize text    ${page_total_text}
     ${page_total_float}=    BuiltIn.Evaluate    float('${clean_page_total}')
     BuiltIn.Should Be Equal As Numbers    ${page_total_float}    ${expected_total_float}

@@ -28,10 +28,10 @@ Get item tax
     ${tax}=    common_web.Get element text when visible    locator=${checkout_overview_page_locator['txt_tax']}
     RETURN    ${tax}
 
-Get item total price
-    [Documentation]    ดึงค่ารวมราคาสินค้าจากหน้าจอ Checkout Overview Page และส่งกลับเป็นตัวแปร
+Get total price
+    [Documentation]    ดึงค่ารวมราคาสินค้ารวมภาษีจากหน้าจอ Checkout Overview Page และส่งกลับเป็นตัวแปร
     ${total_price}=    common_web.Get element text when visible
-    ...    locator=${checkout_overview_page_locator['txt_item_total_price']}
+    ...    locator=${checkout_overview_page_locator['txt_total_price']}
     RETURN    ${total_price}
 
 Get list of product price
