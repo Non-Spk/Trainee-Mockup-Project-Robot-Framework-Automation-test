@@ -9,12 +9,12 @@ Add one item to cart
 
 Add multiple products to cart
     [Documentation]    เพิ่มสินค้าหลายรายการลงในตะกร้าโดยใช้ลิสต์สินค้าที่กำหนด
-    @{product_name_list}=    Create product item list
+    @{product_name_list}=    Create product item name list
     FOR    ${product_name}    IN    @{product_name_list}
         product_list_page.Click add one item to cart    ${product_name}
     END
 
-Create product item list
+Create product item name list
     [Documentation]    สร้างและส่งคืนลิสต์ชื่อสินค้าทั้งหมดจาก dictionary ของสินค้า
     ${product_list}=    Collections.Get Dictionary Keys    ${product}
     ${product_name_list}=    BuiltIn.Create List
