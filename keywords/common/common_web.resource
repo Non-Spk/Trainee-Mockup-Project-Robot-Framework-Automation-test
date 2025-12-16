@@ -43,10 +43,12 @@ Open web browser and maximize window
     ...    profile.password_manager_enabled=${False}
     BuiltIn.Call Method    ${chrome_options}    add_experimental_option    prefs    ${prefs}
     IF    ${is_headless}
-        SeleniumLibrary.Open Browser    ${url}    ${web_config['browser']['headless']}    options=${chrome_options}
+        SeleniumLibrary.Open Browser    ${url}    ${web_config['browser']['headless']}   options=${chrome_options}
     ELSE
         SeleniumLibrary.Open Browser    ${url}    ${web_config['browser']['gui']}    options=${chrome_options}
     END
+    
+    SeleniumLibrary.Maximize Browser Window
 
 Replace locator and wait until element visible
     [Documentation]

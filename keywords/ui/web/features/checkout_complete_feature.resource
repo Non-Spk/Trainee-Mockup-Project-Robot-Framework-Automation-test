@@ -7,3 +7,4 @@ Checkout process success
     checkout_complete_page.Check page title
     checkout_complete_page.Check thank you message
     checkout_complete_page.Click back to home page
+    product_list_page.Check product list page title
