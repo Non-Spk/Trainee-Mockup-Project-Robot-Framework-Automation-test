@@ -6,7 +6,7 @@ Click cart icon to go to cart page and check cart page title
     [Documentation]    กดคลิ้กไอคอนตะกร้าสินค้าและตรวจสอบว่าอยู่หน้าตะกร้าสินค้าแล้ว
     product_list_page.Click cart icon to go to cart page
     cart_page.Check cart page title
-    
+
 Remove product item from cart by click remove button
     [Documentation]    ลบสินค้าออกจากตะกร้าโดยการกดปุ่มลบสินค้า
     [Arguments]    ${product_name}

@@ -18,8 +18,8 @@ Create product item list
     IF    ${is_string}
         ${keys_list}=    BuiltIn.Create List   ${target_keys}
     ELSE
-        ${keys_list}=    BuiltIn.Set Variable    ${target_keys} 
-    END    
+        ${keys_list}=    BuiltIn.Set Variable    ${target_keys}
+    END
     ${product_list}=    BuiltIn.Create List
     FOR    ${key}    IN    @{keys_list}
         Collections.Append To List    ${product_list}    ${product['${key}']}
