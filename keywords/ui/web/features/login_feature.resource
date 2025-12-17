@@ -25,7 +25,7 @@ Input password and verify value in password box
     login_page.Input password    password=${password}
     login_page.Verify value in password box    password=${password}
 
-Open login page and login to product list page
+Open login page and login as user using username password
     [Documentation]    เปิดหน้า Login และเข้าสู่ระบบด้วย Username และ Password จากนั้นไปยังหน้า Product List
     [Arguments]    ${username}    ${password}
     Open login page and wait until page loaded

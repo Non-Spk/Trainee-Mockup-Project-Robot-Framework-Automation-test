@@ -64,7 +64,7 @@ Select dropdown option when ready
     Scroll into element and wait until element ready    locator=${locator}
     SeleniumLibrary.Select From List By Value    ${locator}    ${option}
 
-Screenshot page
+Capture page screenshot with timestamp
     [Documentation]    บันทึกภาพหน้าจอโดยตั้งชื่อไฟล์ตาม timestamp เพื่อหลีกเลี่ยงไฟล์ชื่อซ้ำ และส่งคืน path ของไฟล์
     [Arguments]    ${file_prefix}=screenshot
     ${timestamp}=    DateTime.Get Current Date    result_format=%Y%m%d_%H%M%S

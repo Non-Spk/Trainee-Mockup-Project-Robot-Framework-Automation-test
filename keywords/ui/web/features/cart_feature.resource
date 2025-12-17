@@ -2,15 +2,10 @@
 Resource    ${CURDIR}/../../../../resources/import.resource
 
 *** Keywords ***
-Click cart icon to go to cart page and check cart page title
+Click go to cart page and verify
     [Documentation]    กดคลิ้กไอคอนตะกร้าสินค้าและตรวจสอบว่าอยู่หน้าตะกร้าสินค้าแล้ว
     product_list_page.Click cart icon to go to cart page
     cart_page.Check cart page title
-
-Remove product item from cart by click remove button
-    [Documentation]    ลบสินค้าออกจากตะกร้าโดยการกดปุ่มลบสินค้า
-    [Arguments]    ${product_name}
-    cart_page.Click remove one item from cart    product_name=${product_name}
 
 Verify items in cart
     [Documentation]    ตรวจสอบรายละเอียดสินค้าหลายชิ้นตามรายการใน List
