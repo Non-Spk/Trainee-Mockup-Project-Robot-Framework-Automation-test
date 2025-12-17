@@ -55,4 +55,4 @@ product:
     product_price: $15.99
 testdata:
   ts_03001:
-    test_product:   sauce_labs_backpack
+    test_product: sauce_labs_backpack
