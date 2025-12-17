@@ -13,8 +13,7 @@ Click remove one item from cart
     [Arguments]    ${product_name}
     ${replace_locator}=    common_web.Replace locator and wait until element visible
     ...    locator=${cart_page_locator['btn_remove_item']}
-    ...    target_text=${product_name}
-    ...    replace_text=***replace***
+    ...    replace_text=${product_name}
     common_web.Click element when ready    locator=${replace_locator}
 
 Click back to shopping button
