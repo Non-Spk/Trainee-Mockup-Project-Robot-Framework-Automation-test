@@ -5,7 +5,7 @@ Test Teardown    common_web.Close all browser
 *** Test Cases ***
 TS_03002_001
     [Documentation]    เพิ่มสินค้าหลายชิ้นลงตะกร้าโดยใช้ บัญชีผู้ใช้ standard_user
-    [Tags]    F_0003    TS_03001    TS_03001_001    add_multiple_item     standard_user
+    [Tags]    F_0003    TS_03002    TS_03002_001    add_multiple_item     standard_user
     # เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
     login_feature.Open login page and login to product list page
     ...    username=${account['standard_user']['username']}
