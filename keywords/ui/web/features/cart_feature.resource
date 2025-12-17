@@ -29,7 +29,6 @@ Verify items in cart
 Verify items in cart should fail
     [Documentation]    ตรวจสอบรายละเอียดสินค้าหลายชิ้นตามรายการใน List และผลทดสอบไม่สำเร็จ
     [Arguments]    ${multiple_item_list}
-    ${status}=    BuiltIn.Run Keyword And Return Status
-    ...    Verify items in cart
+    ${status}=    BuiltIn.Run Keyword And Return Status    Verify items in cart
     ...    multiple_item_list=${multiple_item_list}
     IF    ${status}    BuiltIn.Fail

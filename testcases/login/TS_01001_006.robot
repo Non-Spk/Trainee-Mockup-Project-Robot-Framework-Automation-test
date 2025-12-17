@@ -12,7 +12,7 @@ TS_01001_006
     login_feature.Wait until login element is ready
     # กรอก username และตรวจสอบ value หลังกรอก
     login_feature.Input username and verify value in username box
-    ...    username=${account['visual _user']['username']}
+    ...    username=${account['visual_user']['username']}
     # กรอก password และตรวจสอบ value หลังกรอก
     login_feature.Input password and verify value in password box
     ...    password=${account['visual_user']['password']}
