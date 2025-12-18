@@ -4,7 +4,7 @@ Test Teardown    common_web.Close all browser
 
 *** Test Cases ***
 TS_03003_001
-    [Documentation]    เพิ่มสินค้าหนึ่งชิ้นลงตะกร้าโดยใช้ บัญชีผู้ใช้ standard_user
+    [Documentation]    ทดสอบลบสินค้าออกจากตะกร้า 1 ชิ้นโดยใช้บัญชี standard_user
     [Tags]    F_0003    TS_03003    TS_03003_001    remove_single_item     standard_user
     # เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
     login_feature.Open website and login with username and password
