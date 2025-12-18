@@ -23,3 +23,7 @@ TS_04001_002
     cart_page.Click go to checkout button
     # ตรวจสอบว่าอยู่หน้า customer information กรอกข้อมูลครบแต่นามสกุลไม่ขึ้นในช่องกรอกนามสกุลและขึ้น error
     customer_information_feature.Input every fields and last name error
+    # ตรวจสอบว่าอยู่หน้า checkout overview และสามารถ checkout ได้สำเร็จด้วยสินค้า 1 ชิ้น
+    checkout_overview_feature.Confirm checkout with all item    ${product_list}
+    # สามารถ checkout ได้สำเร็จและกลับมาที่หน้า product list ได้สำเร็จ
+    checkout_complete_feature.Complete checkout and go to product list page
