@@ -11,7 +11,7 @@ Cancel checkout process
 Check all product titles in the page
     [Documentation]    ใช้ for loop ในการตรวจสอบว่ามีชื่อสินค้าทุกชิ้นแสดงอยู่ในหน้า checkout overview
     [Arguments]    ${product_list}
-    FOR    ${item}    IN    ${product_list}
+    FOR    ${item}    IN    @{product_list}
         checkout_overview_page.Check product item title    item_name=${item['product_name']}
     END
 
