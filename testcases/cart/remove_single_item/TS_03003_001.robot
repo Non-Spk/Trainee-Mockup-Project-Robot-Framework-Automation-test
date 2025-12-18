@@ -15,9 +15,10 @@ TS_03001_001
     # เพิ่มสินค้าหนึ่งชิ้นลงตะกร้า
     @{product_name}=    product_list_feature.Add products to cart
     ...    target_product_keys=${testdata['ts_03001']['test_product']}
-    # ตรวจสอบว่าอยู่หน้า cart สำเร็จ
+    # ตรวจสอบว่าอยู่หน้า cart สำเร็จ และ ตรวจสอบรายละเอียดสินค้าที่เพิ่มมาที่ตะกร้า
     cart_feature.Click cart button and verify page loaded
+    cart_feature.Verify items in cart    multiple_item_list=@{product_name}
     # ลบรายการสินค้าที่เพิ่มออกจากตะกร้า
-    cart_page.Click remove one item from cart    product_name=${product['sauce_labs_backpack']['product_name']}
-    # ตรวจสอบรายละเอียดสินค้าที่เพิ่มมาที่ตะกร้า
-    cart_feature.Verify items in cart   multiple_item_list=${product_name}
+    cart_page.Click remove one item from cart    ${testdata['ts_03001']['test_product']}
+    # ตรวจสอบตะกร้าว่างเปล่า
+    cart_page.Verify the cart is empty
