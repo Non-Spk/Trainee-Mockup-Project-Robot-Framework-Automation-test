@@ -1,11 +1,11 @@
 *** Settings ***
-Resource    ${CURDIR}/../../resources/import.resource
+Resource    ${CURDIR}/../../../resources/import.resource
 Test Teardown    common_web.Close all browser
 
 *** Test Cases ***
 TS_04001_005
     [Documentation]    สั่งซื้อสินค้าได้ 1 ชิ้นสำเร็จโดยใช้ บัญชีผู้ใช้ standard_user
-    [Tags]    F_0004    TS_04001    TS_04001_005    checkout_1_item     visual_user
+    [Tags]    F_0004    TS_04001    TS_04001_005    checkout_1_item    visual_user
     # เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
     login_feature.Open login page and login to product list page
     ...    username=${account['visual_user']['username']}
