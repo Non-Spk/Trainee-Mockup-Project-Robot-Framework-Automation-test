@@ -3,9 +3,9 @@ Resource    ${CURDIR}/../../../resources/import.resource
 Test Teardown    common_web.Close all browser
 
 *** Test Cases ***
-TS_03001_001
+TS_03003_001
     [Documentation]    เพิ่มสินค้าหนึ่งชิ้นลงตะกร้าโดยใช้ บัญชีผู้ใช้ standard_user
-    [Tags]    F_0003    TS_03001    TS_03001_001    add_single_item     standard_user
+    [Tags]    F_0003    TS_03003    TS_03003_001    remove_single_item     standard_user
     # เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
     login_feature.Open website and login with username and password
     ...    username=${account['standard_user']['username']}
@@ -19,6 +19,6 @@ TS_03001_001
     cart_feature.Click cart button and verify page loaded
     cart_feature.Verify items in cart    multiple_item_list=@{product_name}
     # ลบรายการสินค้าที่เพิ่มออกจากตะกร้า
-    cart_page.Click remove one item from cart    ${testdata['ts_03001']['test_product']}
+    cart_page.Click remove one item from cart    product_name=${product['sauce_labs_backpack']['product_name']}
     # ตรวจสอบตะกร้าว่างเปล่า
     cart_page.Verify the cart is empty
