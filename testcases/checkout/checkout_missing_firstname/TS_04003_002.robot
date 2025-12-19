@@ -5,7 +5,7 @@ Test Teardown    common_web.Close all browser
 *** Test Cases ***
 TS_04003_002
     [Documentation]    สั่งซื้อสินค้าได้ 1 ชิ้นแต่ไม่กรอกชื่อจริงโดยใช้ บัญชีผู้ใช้ problem_user
-    [Tags]    F_0004    TS_04003    TS_04003_001    checkout_missing_firstname    problem_user
+    [Tags]    F_0004    TS_04003    TS_04003_002    checkout_missing_firstname    problem_user
     # เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
     login_feature.Open website and login with username and password
     ...    username=${account['problem_user']['username']}
