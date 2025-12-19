@@ -3,7 +3,7 @@ Resource    ${CURDIR}/../../../resources/import.resource
 Test Teardown    common_web.Close all browser
 
 *** Test Cases ***
-TS_03004_003
+TS_03004_004
     [Documentation]    เปิดตะกร้าตอนที่ตะกร้าว่างเปล่า โดยใช้บัญชี error_user
     [Tags]    F_0003    TS_03004    TS_03004_004    open_empty_cart    error_user
     # เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
