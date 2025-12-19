@@ -31,7 +31,7 @@ Verify product sorted by name a to z
     ${defult_list}=    product_list_page.Get product name list from page
     ${expected_list}=    Collections.Copy List    list_=${defult_list}
     Collections.Sort List    list_=${expected_list}
-    Collections.Lists Should Be Equal    first=${defult_list}    second=${expected_list}
+    Collections.Lists Should Be Equal    list1=${defult_list}    list2=${expected_list}
 
 Verify product sorted by name z to a
     [Documentation]    ตรวจสอบว่าสินค้าเรียงตามชื่อ z -> A ถูกต้อง
@@ -39,7 +39,7 @@ Verify product sorted by name z to a
     ${expected_list}=    Collections.Copy List    list_=${defult_list}
     Collections.Sort List    list_=${expected_list}
     Collections.Reverse List    list_=${expected_list}
-    Collections.Lists Should Be Equal    first=${defult_list}    second=${expected_list}
+    Collections.Lists Should Be Equal    list1=${defult_list}    list2=${expected_list}
 
 Verfiy product sorted by price low to high
     [Documentation]    ตรวจสอบว่าสินค้าเรียงตามราคา ต่ำ ไป สูง ถูกต้อง

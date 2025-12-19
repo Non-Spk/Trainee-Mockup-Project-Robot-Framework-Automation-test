@@ -28,15 +28,6 @@ Click cart icon to go to cart page
     [Documentation]    กดไอคอนตะกร้าเพื่อไปยังหน้า Cart
     common_web.Click element when ready    locator=${product_list_page_locator['btn_go_to_cart']}
 
-Click deopdown sort button
-    [Documentation]    กดปุ่มที่ dropdown เพื่อเลือกประเภทการ sort
-    common_web.Click element when ready    locator=${product_list_page_locator['btn_dropdown']}
-
-Click choose sort type
-    [Documentation]    กดปุ่มประเภทการ sort ที่ต้องการ
-    [Arguments]    ${sort_type}
-    common_web.Click element when ready    locator=${sort_type}
-
 Get product name list from page
     [Documentation]    ดึงชื่อสินค้าทุกชิ้นในหน้าปัจจุบัน
     @{element_name_list}=    SeleniumLibrary.Get WebElements    locator=${product_list_page_locator['lbl_product_name']}
@@ -58,12 +49,12 @@ Get product price list from page
         Collections.Append To List    ${price_list}    ${number}
     END
     RETURN    ${price_list}
-    
+
 Select sort type option
     [Documentation]    เลือกรูปแบบการเรียงลำดับสินค้าจาก dropdown ตามค่าที่กำหนด
     [Arguments]    ${option}
     common_web.Select dropdown option when ready
-    ...    locator=${product_list_page_locator['btn_dropdown']}
+    ...    locator=${product_list_page_locator['btn_sort_dropdown']}
     ...    option=${option}
 
 Wait until page loaded
