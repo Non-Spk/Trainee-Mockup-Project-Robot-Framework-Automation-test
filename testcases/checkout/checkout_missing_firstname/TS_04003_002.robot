@@ -21,5 +21,5 @@ TS_04003_002
     cart_feature.Verify items in cart    multiple_item_list=${product_list}
     # ไปที่หน้า customer information
     cart_page.Click checkout button
-    # ตรวจสอบว่าอยู่หน้า customer information กรอกข้อมูลแค่นามสกุลและรหัสไปรษณีย์และขึ้น error
-    customer_information_feature.Verify error when firstname is missing
+    # ตรวจสอบว่าอยู่หน้า customer information กรอกข้อมูลแค่นามสกุลและรหัสไปรษณีย์แต่ขึ้น error ไม่ใส่ชื่อจริง
+    customer_information_feature.Verify error when lastname is missing
