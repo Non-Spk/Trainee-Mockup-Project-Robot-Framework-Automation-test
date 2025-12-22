@@ -3,13 +3,13 @@ Resource    ${CURDIR}/../../../resources/import.resource
 Test Teardown    common_web.Close all browser
 
 *** Test Cases ***
-TS_04003_004
-    [Documentation]    สั่งซื้อสินค้าได้ 1 ชิ้นแต่ไม่กรอกชื่อจริงโดยใช้ บัญชีผู้ใช้ error_user
-    [Tags]    F_0004    TS_04003    TS_04003_004    checkout_missing_firstname    error_user
+TS_04003_005
+    [Documentation]    สั่งซื้อสินค้าได้ 1 ชิ้นแต่ไม่กรอกชื่อจริงโดยใช้ บัญชีผู้ใช้ visual_user
+    [Tags]    F_0004    TS_04003    TS_04003_005    checkout_missing_firstname    visual_user
     # เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
     login_feature.Open website and login with username and password
-    ...    username=${account['error_user']['username']}
-    ...    password=${account['error_user']['password']}
+    ...    username=${account['visual_user']['username']}
+    ...    password=${account['visual_user']['password']}
     # ตรวจสอบว่าอยู่หน้า product list สำเร็จ
     product_list_page.Check product list page title
     # เพิ่มสินค้าหนึ่งชิ้นลงตะกร้า
