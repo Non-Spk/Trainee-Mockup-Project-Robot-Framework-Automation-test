@@ -3,13 +3,13 @@ Resource    ${CURDIR}/../../../resources/import.resource
 Test Teardown    common_web.Close all browser
 
 *** Test Cases ***
-TS_04005_003
-    [Documentation]    สั่งซื้อสินค้า 1 ชิ้นแต่ยกเลิกการสั่งซื้อโดยใช้ บัญชีผู้ใช้ performance_glitch_user
-    [Tags]    F_0004    TS_04005    TS_04005_003    cancel_checkout    performance_glitch_user
+TS_04004_005
+    [Documentation]    สั่งซื้อสินค้าได้ 1 ชิ้นแต่ไม่กรอกรหัสไปรษณีย์โดยใช้ บัญชีผู้ใช้ visual_user
+    [Tags]    F_0004    TS_04004    TS_04004_005    checkout_missing_zipcode    visual_user
     # เปิดหน้า login และตรวจสอบหน้า login เปิดสำเร็จ
     login_feature.Open website and login with username and password
-    ...    username=${account['performance_glitch_user']['username']}
-    ...    password=${account['performance_glitch_user']['password']}
+    ...    username=${account['visual_user']['username']}
+    ...    password=${account['visual_user']['password']}
     # ตรวจสอบว่าอยู่หน้า product list สำเร็จ
     product_list_page.Check product list page title
     # เพิ่มสินค้าหนึ่งชิ้นลงตะกร้า
@@ -21,7 +21,5 @@ TS_04005_003
     cart_feature.Verify items in cart    multiple_item_list=${product_list}
     # ไปที่หน้า customer information
     cart_page.Click checkout button
-    # ตรวจสอบว่าอยู่หน้า customer information กรอกข้อมูลครบแล้วไปยังหน้า checkout overview
-    customer_information_feature.Input every fields and proceed to checkout overview page
-    # ยกเลิกการสั่งซื้อสินค้า
-    checkout_overview_feature.Cancel checkout process
+    # ตรวจสอบว่าอยู่หน้า customer information กรอกข้อมูลแค่ชื่อและนามสกุลและขึ้น error
+    customer_information_feature.Verify error when zip or postal code is missing
