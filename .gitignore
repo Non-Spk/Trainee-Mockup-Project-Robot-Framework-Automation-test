@@ -8,10 +8,6 @@ report.html
 log.html
 *.png
 
-# Browser library recordings
-browser/
-playwright-log.txt
-
 # Test results / temp files
 results/
 reports/
