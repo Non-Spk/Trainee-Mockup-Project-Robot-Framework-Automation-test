@@ -58,7 +58,7 @@ robot -d reports/results -i <tag> .
   - Add multiple items and verify cart count
   - Remove item from cart
   - Open cart with empty cart
-- F_0003 - Checkout
+- F_0004 - Checkout
   - Order of 1 item completed successfully
   - Order all items completed successfully
   - Checkout with missing first name
