@@ -39,7 +39,7 @@ Resource    ${CURDIR}/../resources/locators/login_page_locator.resource
 Resource    ${CURDIR}/../resources/locators/products_list_page_locator.resource
 
 # SETTING
-Variables    ${CURDIR}/../resources/setting/android_config.yaml
+Variables    ${CURDIR}/../resources/setting/mobile_config.yaml
 Variables    ${CURDIR}/../resources/setting/config.yaml
 
 # DATATEST
