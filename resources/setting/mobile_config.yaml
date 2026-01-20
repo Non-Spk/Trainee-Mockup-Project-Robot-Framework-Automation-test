@@ -5,3 +5,7 @@ device_name: DEVICE_NAME
 remote_url: http://127.0.0.1:4723
 app_package: "com.shopee.th"
 app_activity: "com.shopee.app.ui.home.HomeActivity_"
+
+Swipe_screen:
+  persent_start: 0.9
+  persent_end: 0.1
