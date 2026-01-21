@@ -17,7 +17,7 @@ Input text when ready
     AppiumLibrary.Element Should Contain Text    ${locator}    ${text}
 
 Open android application
-    [Documentation]    เปิดแอนด์ดรอยแอปพลิเคชัน
+    [Documentation]    เปิดแอปพลิเคชันแอนด์ดรอย
     AppiumLibrary.Open Application
     ...    remote_url=${remote_url}
     ...    platformName=${platform_name}
@@ -80,7 +80,7 @@ Tap element when ready
     [Documentation]    สัมผัส element เมื่อพร้อม
     [Arguments]    ${locator}
     Wait until element enable    locator=${locator}
-    AppiumLibrary.Click Element    ${locator}
+    AppiumLibrary.Tap    ${locator}
 
 Wait until element enable
     [Documentation]    รอจนกว่า element จะใช้งานได้
