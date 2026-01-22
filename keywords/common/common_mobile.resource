@@ -24,8 +24,8 @@ Open android application
     ...    platformVersion=${device_capabilities['platform_version']}
     ...    deviceName=${device_capabilities['device_name']}
     ...    automationName=${device_capabilities['automation_name']}
-    ...    appPackage=${device_capabilities['app_package']}
-    ...    appActivity=${device_capabilities['app_activity']}
+    ...    appPackage=${app_capabilities['app_package']}
+    ...    appActivity=${app_capabilities['app_activity']}
     ...    noReset=false
     ...    fullReset=false
     ...    newCommandTimeout=300
