@@ -36,6 +36,7 @@ Resource    ${CURDIR}/../resources/locators/checkout_complete_page_locator.resou
 Resource    ${CURDIR}/../resources/locators/checkout_overview_page_locator.resource
 Resource    ${CURDIR}/../resources/locators/customer_information_page_locator.resource
 Resource    ${CURDIR}/../resources/locators/login_page_locator.resource
+Resource    ${CURDIR}/../resources/locators/mobile/android/choose_language_page_locator.resource
 Resource    ${CURDIR}/../resources/locators/products_list_page_locator.resource
 
 # SETTING
