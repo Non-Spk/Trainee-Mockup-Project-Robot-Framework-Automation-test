@@ -17,6 +17,24 @@ Check cart is empty
     common_mobile.Wait until element visible
     ...    locator=${cart_page_mobile_locator['cart_empty_icon']}
 
+Check item name 
+    [Documentation]    ตรวจสอบชื่อสินค้าที่เพิ่มเข้ามาว่าตรงตามข้อมูลทดสอบหรือไม่
+    common_mobile.Check element text when visible
+    ...    locator=${cart_page_mobile_locator['txt_product_name']}
+    ...    text=${product_detail['product_name']}
+
+Check item qty
+    [Documentation]    ตรวจสอบจำนวนสินค้าที่เพิ่มเข้ามาว่าตรงตามข้อมูลทดสอบหรือไม่
+    common_mobile.Check element text when visible
+    ...    locator=${cart_page_mobile_locator['product_card_container']}
+    ...    text=${product_detail['product_qty']}
+
+Check item price
+    [Documentation]    ตรวจสอบราคาสินค้าที่เพิ่มเข้ามาว่าตรงตามข้อมูลทดสอบหรือไม่
+    common_mobile.Check element text when visible
+    ...    locator=${cart_page_mobile_locator['product_card_container']}
+    ...    text=${product_detail['product_price']}
+
 Tap to increase item qty
     [Documentation]    สัมผัสเพื่อเพิ่มจำนวนสินค้านั้นๆที่อยู่ในตะกร้า
     common_mobile.Tap element when ready
