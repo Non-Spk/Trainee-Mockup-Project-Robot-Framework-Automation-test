@@ -26,8 +26,6 @@ Open android application
     ...    automationName=${device_capabilities['automation_name']}
     ...    appPackage=${app_capabilities['app_package']}
     ...    appActivity=${app_capabilities['app_activity']}
-    ...    appPackage=${app_capabilities['app_package']}
-    ...    appActivity=${app_capabilities['app_activity']}
     ...    noReset=false
     ...    fullReset=false
     ...    newCommandTimeout=300
