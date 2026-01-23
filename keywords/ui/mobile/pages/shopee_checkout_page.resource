@@ -8,14 +8,14 @@ Check checkout page title
     ...    locator=${checkout_page_locator['txt_title']}
     ...    text=${txt_shopee_checkout_page['txt_title']}
 
-Check order price should be correct in checkout page
+Check order price in checkout page
     [Documentation]    ตรวจสอบราคาสินค้าว่าถูกต้องในหน้าชำระสินค้า
     [Arguments]    ${order_price}
     common_mobile.Check element text when visible
     ...    locator=${checkout_page_locator['lbl_order_price']}
     ...    text=${order_price}
 
-Check product name should be correct in checkout page
+Check product name in checkout page
     [Documentation]    ตรวจสอบชื่อสินค้าว่าถูกต้องในหน้าชำระสินค้า
     common_mobile.Check element text when visible
     ...    locator=${checkout_page_locator['lbl_product_name']}
