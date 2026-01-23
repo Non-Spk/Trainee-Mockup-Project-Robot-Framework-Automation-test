@@ -44,8 +44,8 @@ Variables    ${CURDIR}/../resources/setting/config.yaml
 Variables    ${CURDIR}/../resources/setting/mobile_config.yaml
 
 # DATATEST
-Variables    ${CURDIR}/../resources/datatest/mobile_datatest.yaml
-Variables    ${CURDIR}/../resources/datatest/web_datatest.yaml
+Variables    ${CURDIR}/../resources/datatest/mobile/datatest.yaml
+Variables    ${CURDIR}/../resources/datatest/web/datatest.yaml
 
 # TRANSALATION
 Variables    ${CURDIR}/../resources/transalation/mobile/th.yaml
