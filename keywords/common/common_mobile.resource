@@ -70,7 +70,7 @@ Swipe container until element visible
             ${start_x}=    BuiltIn.Evaluate    ${location['x']}+(${element_size['width']}/2)
             ${start_y}=    BuiltIn.Evaluate    ${location['y']}+(${element_size['height']}*${swipe_screen['persent_end']})
             ${end_x}=    BuiltIn.Evaluate    ${start_x}
-            ${end_y}=    BuiltIn.Evaluate   ${location['y']}+(${element_size['height']}*${swipe_screen['persent_start']})
+            ${end_y}=    BuiltIn.Evaluate    ${location['y']}+(${element_size['height']}*${swipe_screen['persent_start']})
         END
         AppiumLibrary.Swipe    start_x=${start_x}    start_y=${start_y}    end_x=${end_x}    end_y=${end_y}    duration=${duration}
     END
