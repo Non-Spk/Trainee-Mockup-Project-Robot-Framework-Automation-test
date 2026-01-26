@@ -21,7 +21,7 @@ Check product name in checkout page
     ...    locator=${checkout_page_locator['lbl_product_name']}
     ...    replace_text=***replace***
     common_mobile.Check element text when visible
-    ...    locator=${checkout_page_locator['replaced_locator']}
+    ...    locator=${replaced_locator}
     ...    text=${product_detail['product_name']}
 
 Swipe to find order price on checkout page
